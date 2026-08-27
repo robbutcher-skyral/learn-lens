@@ -16,8 +16,6 @@
     "@adk/lens-cli": "^0.1.22",
     "@adk/lens-design": "^1.0.0",
     "@adk/lens-react": "^4.0.4",
-    "@adk/protomaps-basemap-style": "^0.1.1",
-    "@adk/vite-plugin-protomaps-assets": "^1.0.0",
     "@deck.gl-community/editable-layers": "^9.3.8",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",

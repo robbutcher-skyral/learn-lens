@@ -238,16 +238,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adk/protomaps-basemap-style@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@adk/protomaps-basemap-style@npm:0.1.1::__archiveUrl=https%3A%2F%2Feurope-west2-npm.pkg.dev%2Fskyr-artefacts%2Fskyral-npm%2F%40adk%2Fprotomaps-basemap-style%2F-%2F%40adk%2Fprotomaps-basemap-style-0.1.1.tgz"
-  peerDependencies:
-    "@protomaps/basemaps": ^5.0.0
-    maplibre-gl: ">=3.0.0"
-  checksum: 10c0/96a080d1074513e548d41ea33a1b3287b653087548f95a34fda437ebc8d5ebe3a772d4a893100e04d9e3b0b1c375a018486212bf0801fb18858792454adb472f
-  languageName: node
-  linkType: hard
-
 "@adk/react-utils@npm:^0.2.1":
   version: 0.2.2
   resolution: "@adk/react-utils@npm:0.2.2::__archiveUrl=https%3A%2F%2Feurope-west2-npm.pkg.dev%2Fskyr-artefacts%2Fskyral-npm%2F%40adk%2Freact-utils%2F-%2F%40adk%2Freact-utils-0.2.2.tgz"
@@ -293,19 +283,6 @@ __metadata:
     "@math.gl/core": "npm:^3.5.5"
     luxon: "npm:^3.4.2"
   checksum: 10c0/9e9cfc0f09739d6828d7f4cb3055462b9cb795b2dcd98bc474eb3ec0def8eeb702a8a9d22d324026bedafd1606677941960c509e6ac833973796eb926b0a8a6a
-  languageName: node
-  linkType: hard
-
-"@adk/vite-plugin-protomaps-assets@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@adk/vite-plugin-protomaps-assets@npm:1.0.0::__archiveUrl=https%3A%2F%2Feurope-west2-npm.pkg.dev%2Fskyr-artefacts%2Fskyral-npm%2F%40adk%2Fvite-plugin-protomaps-assets%2F-%2F%40adk%2Fvite-plugin-protomaps-assets-1.0.0.tgz"
-  peerDependencies:
-    "@protomaps/basemaps": ^5.0.0
-    vite: ">=5.0.0"
-  peerDependenciesMeta:
-    "@protomaps/basemaps":
-      optional: true
-  checksum: 10c0/12262535622bcceff932318a2b63801d830dcf7f21f9ed84ccf7b3390bf27369dc6afeb459817c630350721e94c01ae8cf8677abeee5bdc14b77570bf0a341b9
   languageName: node
   linkType: hard
 
@@ -6427,8 +6404,6 @@ __metadata:
     "@adk/lens-cli": "npm:^0.1.22"
     "@adk/lens-design": "npm:^1.0.0"
     "@adk/lens-react": "npm:^4.0.4"
-    "@adk/protomaps-basemap-style": "npm:^0.1.1"
-    "@adk/vite-plugin-protomaps-assets": "npm:^1.0.0"
     "@deck.gl-community/editable-layers": "npm:^9.3.8"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
