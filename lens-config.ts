@@ -6,6 +6,7 @@ import {
 } from "@adk/lens-react";
 
 import pluginA from "./src/plugins/plugin-a-plugin";
+import readPosition from "./src/plugins/read-position-plugin";
 
 const REACT_CONFIG = {
   LOGO: getLensEnvVar("LOGO", ""),
@@ -34,6 +35,11 @@ const FEATURES = [
         color: "#1976d2",
         mapUI: { summary: [0, 0] },
         banner: { position: "above", collapsible: true },
+        sliceKey: "pluginAState",
+      }),
+      readPosition({
+        name: "ReadPosition",
+        version: "1.0.0",
         sliceKey: "pluginAState",
       }),
     ],
