@@ -10,22 +10,22 @@ import {
   type StaticRouteRef,
 } from "@adk/lens-react";
 
-import type { ReadPositionPluginConfig } from "./config";
+import type { DashboardPluginConfig } from "./config";
 import { PLUGIN_ID } from "./constants";
-import { ReadPositionOverview } from "./routes";
+import { DashboardOverview } from "./routes";
 
 export { PLUGIN_ID } from "./constants";
 
-export type ReadPositionPluginInstance = BasePluginInstance;
+export type DashboardPluginInstance = BasePluginInstance;
 
-const overview = createRouteRef<StaticRouteRef>("ReadPositionPlugin", "overview");
+const overview = createRouteRef<StaticRouteRef>("DashboardPlugin", "overview");
 
 export const routes = { overview };
 
-const readPositionPlugin: PluginFactory<ReadPositionPluginConfig> = (config: ReadPositionPluginConfig): ReadPositionPluginInstance => {
+const dashboardPlugin: PluginFactory<DashboardPluginConfig> = (config: DashboardPluginConfig): DashboardPluginInstance => {
   routeManager.registerRoute(overview, {
-    path: "/read",
-    component: ReadPositionOverview,
+    path: "/dashboard",
+    component: DashboardOverview,
     navbar: { label: config.name },
   });
 
@@ -39,6 +39,6 @@ const readPositionPlugin: PluginFactory<ReadPositionPluginConfig> = (config: Rea
   };
 };
 
-export default definePlugin(readPositionPlugin);
+export default definePlugin(dashboardPlugin);
 
-export type { ReadPositionPluginConfig } from "./config";
+export type { DashboardPluginConfig } from "./config";

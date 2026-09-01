@@ -38,7 +38,7 @@ const pluginAPlugin: PluginFactory<PluginAPluginConfig> = (config: PluginAPlugin
   const Banner: FC = () => <PluginAAboveMapBanner />;
 
   routeManager.registerRoute(overview, {
-    path: "/plugin",
+    path: "/write",
     component: PluginAOverview,
     navbar: { label: config.name },
   });

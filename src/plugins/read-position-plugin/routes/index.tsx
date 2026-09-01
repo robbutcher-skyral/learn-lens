@@ -19,13 +19,13 @@ export interface PluginAState {
 }
 
 type State = {
-  pluginAState: PluginAState;
+  shareState: PluginAState;
 };
 
 /** Example: list of items with hover. Replace with your overview layout and behaviour. */
 export const ReadPositionOverview: FC = () => {
   const { lng, lat } = useSelector(
-    (state: State) => state.pluginAState.selectedPosition,
+    (state: State) => state.shareState.selectedPosition,
   );
 
   useEffect(() => {

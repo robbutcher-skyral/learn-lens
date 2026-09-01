@@ -8,6 +8,8 @@ import {
 import pluginA from "./src/plugins/plugin-a-plugin";
 import readPosition from "./src/plugins/read-position-plugin";
 
+import dashboard from "./src/plugins/dashboard-plugin";
+
 const REACT_CONFIG = {
   LOGO: getLensEnvVar("LOGO", ""),
   TITLE: getLensEnvVar("TITLE", "learn-lens"),
@@ -24,23 +26,37 @@ const MAP_CONFIG = {
 } satisfies MapConfig;
 
 const FEATURES = [
+    {
+    id: "dashboard",
+    name: "Dashboard",
+    routePrefix: "/dashboard",
+    plugins: [
+      dashboard({
+        name: "Dashboard",
+        version: "1.0.0",
+        mapUI: { summary: [0, 0] },
+        banner: { position: "above", collapsible: true },
+        sliceKey: "",
+      }),
+    ],
+  },
   {
-    id: "pluginA",
-    name: "PluginA",
-    routePrefix: "/feature",
+    id: "state_feature",
+    name: "State sharing feature",
+    routePrefix: "/state",
     plugins: [
       pluginA({
-        name: "Feature",
+        name: "Write state",
         version: "1.0.0",
         color: "#1976d2",
         mapUI: { summary: [0, 0] },
         banner: { position: "above", collapsible: true },
-        sliceKey: "pluginAState",
+        sliceKey: "shareState",
       }),
       readPosition({
-        name: "ReadPosition",
+        name: "Read state",
         version: "1.0.0",
-        sliceKey: "pluginAState",
+        sliceKey: "shareState", //TODO: this is not actually used in the plugin, it should be read in route/index
       }),
     ],
   },
