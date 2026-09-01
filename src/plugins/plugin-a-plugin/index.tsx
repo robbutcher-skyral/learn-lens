@@ -17,9 +17,9 @@ import {
 import type { PluginAPluginConfig } from "./config";
 import { SummaryCard, PluginAAboveMapBanner } from "./components";
 import { PLUGIN_ID, LAYER_IDS } from "./constants";
-import { MOCK_PLUGINAS } from "./data";
 import { createPluginASlice } from "./redux/pluginASlice";
 import { PluginAOverview } from "./routes";
+import { Layer } from "./components/Layer";
 
 export { PLUGIN_ID, LAYER_IDS } from "./constants";
 
@@ -38,7 +38,7 @@ const pluginAPlugin: PluginFactory<PluginAPluginConfig> = (config: PluginAPlugin
   const Banner: FC = () => <PluginAAboveMapBanner />;
 
   routeManager.registerRoute(overview, {
-    path: "/pluginAAA",
+    path: "/plugin",
     component: PluginAOverview,
     navbar: { label: config.name },
   });
@@ -63,13 +63,14 @@ const pluginAPlugin: PluginFactory<PluginAPluginConfig> = (config: PluginAPlugin
 
   return {
     id: PLUGIN_ID,
-    layers: [],
+    layers: [Layer],
     routes: [overview.path],
     destroy() {
       routeManager.removeRoute(overview.path);
       layerManager.removeLayer(LAYER_IDS.MAIN);
       mapManager.removeMapUI(summaryId);
       mapManager.removeMapSibling(bannerId);
+      lensManager.store.removeSlice(sliceKey)
     },
   };
 };

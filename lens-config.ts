@@ -26,10 +26,10 @@ const FEATURES = [
   {
     id: "pluginA",
     name: "PluginA",
-    routePrefix: "/pluginA",
+    routePrefix: "/feature",
     plugins: [
       pluginA({
-        name: "PluginA",
+        name: "Feature",
         version: "1.0.0",
         color: "#1976d2",
         mapUI: { summary: [0, 0] },

@@ -1,11 +1,20 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
-/** Replace: define state shape and reducers to match your plugin's needs. */
+type Position = {
+  lng: number | null;
+  lat: number | null;
+};
+
 export interface PluginAState {
-  selectedId: string | null;
+  selectedPosition: Position;
 }
 
-const initialState: PluginAState = { selectedId: null };
+const initialState: PluginAState = {
+  selectedPosition: {
+    lng: null,
+    lat: null,
+  },
+};
 
 /**
  * Creates the slice with the name from config.sliceKey. Called by the plugin on init.
@@ -16,8 +25,9 @@ export function createPluginASlice(sliceKey: string) {
     name: sliceKey,
     initialState,
     reducers: {
-      setSelectedId: (state, action: PayloadAction<string | null>) => {
-        state.selectedId = action.payload;
+      setSelectedPosition: (state, action: PayloadAction<Position | null>) => {
+        state.selectedPosition.lng = action.payload?.lng || null;
+        state.selectedPosition.lat = action.payload?.lat || null;
       },
     },
   });
